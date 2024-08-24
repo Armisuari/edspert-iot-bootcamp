@@ -1,0 +1,93 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "5a9b0855-d999-4a6c-acbe-89592a27acbb")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 110.49 38.1)
+		(size 59.69 85.09)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "62922b60-db64-414b-8a54-a9c82449b02f")
+		(property "Sheetname" "Gateway"
+			(at 110.49 37.3884 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "gateway.kicad_sch"
+			(at 110.49 123.7746 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcb_edspert_v3"
+				(path "/5a9b0855-d999-4a6c-acbe-89592a27acbb"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 44.45 38.1)
+		(size 59.69 85.09)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "caf572d8-e9b8-4042-86ae-11b5f9c7b0c2")
+		(property "Sheetname" "Node"
+			(at 44.45 37.3884 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "node.kicad_sch"
+			(at 44.45 123.7746 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pcb_edspert_v3"
+				(path "/5a9b0855-d999-4a6c-acbe-89592a27acbb"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
