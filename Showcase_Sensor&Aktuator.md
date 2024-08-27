@@ -54,8 +54,8 @@ void loop() {
   int nilaiADC = analogRead(LDRSensor);
   intensitasCahaya = intensitas(nilaiADC); // Conversi ADC ke Lux
 
-  float temperature = dht.readTemperature();       // Membaca nilai suhu
-  float humidity = dht.readHumidity();    // Membaca nilai kelembapan
+  temperature = dht.readTemperature();       // Membaca nilai suhu
+  humidity = dht.readHumidity();    // Membaca nilai kelembapan
 
   motion = digitalRead(PIRSENSOR);
   if(motion == 1){Smotion = "Detected";}
