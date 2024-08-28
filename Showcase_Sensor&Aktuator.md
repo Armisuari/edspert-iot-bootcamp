@@ -4,9 +4,9 @@ Kode ini dapat digunakan sebagai payload data untuk pengiriman data menggunakan 
 Kode yang Anda berikan bertujuan untuk membaca sensor suhu, kelembaban, intensitas cahaya, dan mendeteksi gerakan menggunakan DHT22, LDR, dan sensor PIR, serta menampilkan hasilnya di layar OLED.
 
 ### Kebutuhan Library:
-Adafruit GFX Library by Adafruit (1.11.19)
-Adafruit SSD1306 by Adafruit (2.5.9)
-DHT sensor library [DHT sensor library by Adafruit]
+- Adafruit GFX Library by Adafruit (1.11.19)
+- Adafruit SSD1306 by Adafruit (2.5.9)
+- DHT sensor library [DHT sensor library by Adafruit]
 
 ### Skema Rangkaian
 ![Gambar Rangkaian](https://github.com/Armisuari/edspert-iot-bootcamp/blob/main/gambar/asasads.jpg)
