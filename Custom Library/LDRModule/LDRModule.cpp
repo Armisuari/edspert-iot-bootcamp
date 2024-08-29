@@ -1,18 +1,27 @@
-#include "LDRModule.h"
+#include "LDR.h"
 
-float LDRModule::bacaADC(){
+float LDR::bacaADC(){
   adcSignal = analogRead(_pin);
   return adcSignal;
 }
 
+void LDR::begin(int resolusi){
+  analogReadResolution(resolusi);
+}
 
-float LDRModule::intensitas(int mode){
+
+float LDR::readIntensitas(int mode){
   bacaADC();
-  const float GAMMA = 0.7;
-  const float RL10 = 50;
-  float voltase = adcSignal / 4096. * 5;
-  float resistansi = 2000 * voltase / (1-voltase / 5);
-  kecerahan =pow(RL10 * 1e3 * pow(10, GAMMA) /resistansi, (1/GAMMA)); 
+  if(_type == 5){
+    const float GAMMA = 0.7;
+    const float RL10 = 50;
+    float voltase = adcSignal / 4096. * 5;
+    float resistansi = 2000 * voltase / (1-voltase / 5);
+    kecerahan =pow(RL10 * 1e3 * pow(10, GAMMA) /resistansi, (1/GAMMA));
+  } 
+  else{}
+  
+
   if (mode == 1){
     kecerahan = kecerahan;
   }
@@ -25,7 +34,7 @@ float LDRModule::intensitas(int mode){
   return kecerahan;
 }
 
-bool LDRModule::statusLDR(int batas){
+bool LDR::readStatus(int batas){
   bool state;
   if (kecerahan <= batas){
     state = true;
@@ -36,6 +45,7 @@ bool LDRModule::statusLDR(int batas){
   return state;
 }
 
-LDRModule::LDRModule(int pin){
+LDR::LDR(int pin, int type){
   _pin = pin;
+  _type = type;
 }
