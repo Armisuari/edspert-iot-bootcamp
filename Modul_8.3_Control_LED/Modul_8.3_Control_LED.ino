@@ -5,11 +5,11 @@
 
 #define pinLED 23
 
-const char* ssid = "Wokwi-GUEST";
-const char* password = "";
-const String appName = "";
-const String devName = "";
-const String accessKey = "";
+const char* ssid = ""; // isikan dengan SSID wifi Anda. SSID Wokwi "Wokwi-GUEST"
+const char* password = ""; // isikan dengan password wifi Anda. Password SSID Wokwi tanpa Password biarkan ""
+const String appName = ""; // isikan dengan nama application antares Anda
+const String devName = ""; // isikan dengan nama device antares Anda
+const String accessKey = ""; // isikan dengan access key Anda
 const String url = String("http://platform.antares.id:8080/~/antares-cse/antares-id/"+ appName+"/"+devName+"/la");
 
 void setup() {
