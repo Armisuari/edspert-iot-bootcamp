@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "author": "Fariz Alemuda",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+      { "type": "wokwi-dht22", "id": "dht1", "top": -18.9, "left": 167.4, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "dht1:VCC", "esp:3V3", "red", [ "v19.2", "h-57.6", "v-105.6", "h-144", "v48" ] ],
+      [ "dht1:SDA", "esp:23", "green", [ "v28.8", "h-76.7", "v-57.6" ] ],
+      [ "dht1:GND", "esp:GND.2", "black", [ "v38.4", "h-76.8", "v-96", "h0", "v-9.6" ] ]
+    ],
+    "dependencies": {}
+  }
