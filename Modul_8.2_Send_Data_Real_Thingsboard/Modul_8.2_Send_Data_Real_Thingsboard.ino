@@ -7,23 +7,13 @@
 #define DHTPIN 23
 #define DHTTYPE DHT22
 
-// Parameter Wi-Fi 
-String ssid = "Wokwi-GUEST";
-String password = "";
-
 // Parameter URL/Endpoint 
-String accessToken = "access-token";
+String accessToken = "thingsboard-access-token";
 String url = "https://demo.thingsboard.io/api/v1/"+ accessToken + "/telemetry";
 
 DHT dht(DHTPIN, DHTTYPE);
 
-void setup() {
-  // Initialize Serial Communication
-  Serial.begin(115200);
-  Serial.println();
-
-  dht.begin();
-
+void connectWiFi(String ssid, String password){
   // Initialize Wi-Fi
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
@@ -33,6 +23,17 @@ void setup() {
     delay(1000);
   }
   Serial.println(WiFi.localIP());
+}
+
+void setup() {
+  // Initialize Serial Communication
+  Serial.begin(115200);
+  Serial.println();
+
+  dht.begin();
+  
+  //ssid WiFi, pass WiFi
+  connectWiFi("Wokwi-GUEST","");
 }
 
 void loop() {
